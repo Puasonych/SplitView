@@ -7,7 +7,7 @@ public struct SplitView<Content: View>: View {
     let content: () -> Content
     public let preferredDisplayMode: UISplitViewController.DisplayMode
     
-    init(preferredDisplayMode: UISplitViewController.DisplayMode = .automatic, @ViewBuilder content: @escaping () -> Content) {
+    public init(preferredDisplayMode: UISplitViewController.DisplayMode = .automatic, @ViewBuilder content: @escaping () -> Content) {
         self.content = content
         self.preferredDisplayMode = preferredDisplayMode
     }
