@@ -43,7 +43,7 @@ extension SplitView {
 @available(watchOS, unavailable)
 extension SplitView {
 
-    static func buildControllers<C0: View>(_ view: C0) -> [UIViewController] {
+    static func buildControllers(_ view: Content) -> [UIViewController] {
         prepareView(view)
     }
 }
@@ -52,7 +52,7 @@ extension SplitView {
 @available(watchOS, unavailable)
 extension SplitView {
 
-    static func buildControllers<C0: View, C1: View>(_ views: TupleView<(C0, C1)>) -> [UIViewController] {
+    static func buildControllers<C0: View, C1: View>(_ views: Content) -> [UIViewController] where Content == TupleView<(C0, C1)> {
         [prepareView(views.value.0), prepareView(views.value.1)].flatMap { $0 }
     }
 }
@@ -61,7 +61,7 @@ extension SplitView {
 @available(watchOS, unavailable)
 extension SplitView {
 
-    static func buildControllers<C0: View, C1: View, C2: View>(_ views: TupleView<(C0, C1, C2)>) -> [UIViewController] {
+    static func buildControllers<C0: View, C1: View, C2: View>(_ views: Content) -> [UIViewController] where Content == TupleView<(C0, C1, C2)> {
         [prepareView(views.value.0), prepareView(views.value.1), prepareView(views.value.2)].flatMap { $0 }
     }
 }
@@ -70,7 +70,7 @@ extension SplitView {
 @available(watchOS, unavailable)
 extension SplitView {
 
-    static func buildControllers<C0: View, C1: View, C2: View, C3: View>(_ views: TupleView<(C0, C1, C2, C3)>) -> [UIViewController] {
+    static func buildControllers<C0: View, C1: View, C2: View, C3: View>(_ views: Content) -> [UIViewController] where Content == TupleView<(C0, C1, C2, C3)> {
         [prepareView(views.value.0),
          prepareView(views.value.1),
          prepareView(views.value.2),
@@ -82,7 +82,7 @@ extension SplitView {
 @available(watchOS, unavailable)
 extension SplitView {
 
-    static func buildControllers<C0: View, C1: View, C2: View, C3: View, C4: View>(_ views: TupleView<(C0, C1, C2, C3, C4)>) -> [UIViewController] {
+    static func buildControllers<C0: View, C1: View, C2: View, C3: View, C4: View>(_ views: Content) -> [UIViewController] where Content == TupleView<(C0, C1, C2, C3, C4)> {
         [prepareView(views.value.0),
          prepareView(views.value.1),
          prepareView(views.value.2),
@@ -94,7 +94,7 @@ extension SplitView {
 @available(watchOS, unavailable)
 extension SplitView {
 
-    static func buildControllers<C0: View, C1: View, C2: View, C3: View, C4: View, C5: View>(_ views: TupleView<(C0, C1, C2, C3, C4, C5)>) -> [UIViewController] {
+    static func buildControllers<C0: View, C1: View, C2: View, C3: View, C4: View, C5: View>(_ views: Content) -> [UIViewController] where Content == TupleView<(C0, C1, C2, C3, C4, C5)> {
         [prepareView(views.value.0),
          prepareView(views.value.1),
          prepareView(views.value.2),
@@ -107,7 +107,7 @@ extension SplitView {
 @available(watchOS, unavailable)
 extension SplitView {
 
-    static func buildControllers<C0: View, C1: View, C2: View, C3: View, C4: View, C5: View, C6: View>(_ views: TupleView<(C0, C1, C2, C3, C4, C5, C6)>) -> [UIViewController] {
+    static func buildControllers<C0: View, C1: View, C2: View, C3: View, C4: View, C5: View, C6: View>(_ views: Content) -> [UIViewController] where Content == TupleView<(C0, C1, C2, C3, C4, C5, C6)> {
         [prepareView(views.value.0),
          prepareView(views.value.1),
          prepareView(views.value.2),
@@ -121,7 +121,7 @@ extension SplitView {
 @available(watchOS, unavailable)
 extension SplitView {
 
-    static func buildControllers<C0: View, C1: View, C2: View, C3: View, C4: View, C5: View, C6: View, C7: View>(_ views: TupleView<(C0, C1, C2, C3, C4, C5, C6, C7)>) -> [UIViewController] {
+    static func buildControllers<C0: View, C1: View, C2: View, C3: View, C4: View, C5: View, C6: View, C7: View>(_ views: Content) -> [UIViewController] where Content == TupleView<(C0, C1, C2, C3, C4, C5, C6, C7)> {
         [prepareView(views.value.0),
          prepareView(views.value.1),
          prepareView(views.value.2),
@@ -136,7 +136,7 @@ extension SplitView {
 @available(watchOS, unavailable)
 extension SplitView {
 
-    static func buildControllers<C0: View, C1: View, C2: View, C3: View, C4: View, C5: View, C6: View, C7: View, C8: View>(_ views: TupleView<(C0, C1, C2, C3, C4, C5, C6, C7, C8)>) -> [UIViewController] {
+    static func buildControllers<C0: View, C1: View, C2: View, C3: View, C4: View, C5: View, C6: View, C7: View, C8: View>(_ views: Content) -> [UIViewController] where Content == TupleView<(C0, C1, C2, C3, C4, C5, C6, C7, C8)> {
         [prepareView(views.value.0),
          prepareView(views.value.1),
          prepareView(views.value.2),
@@ -152,7 +152,7 @@ extension SplitView {
 @available(watchOS, unavailable)
 extension SplitView {
 
-    static func buildControllers<C0: View, C1: View, C2: View, C3: View, C4: View, C5: View, C6: View, C7: View, C8: View, C9: View>(_ views: TupleView<(C0, C1, C2, C3, C4, C5, C6, C7, C8, C9)>) -> [UIViewController] {
+    static func buildControllers<C0: View, C1: View, C2: View, C3: View, C4: View, C5: View, C6: View, C7: View, C8: View, C9: View>(_ views: Content) -> [UIViewController] where Content == TupleView<(C0, C1, C2, C3, C4, C5, C6, C7, C8, C9)> {
         [prepareView(views.value.0),
          prepareView(views.value.1),
          prepareView(views.value.2),
